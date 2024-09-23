@@ -16,7 +16,7 @@ This python-development-ks repository contains projects built as a part of inter
 
 
 ### How to run?
-    ```python3 calculator.py
+    python3 calculator.py
 
 ### Output
 ```.............................Welcome to command line simple Calculator!.......................................
