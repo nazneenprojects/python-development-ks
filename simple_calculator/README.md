@@ -3,21 +3,19 @@ This python-development-ks repository contains projects built as a part of inter
 
 ## Task 1: Simple Calculator
 ### Main Goals:
-    - Create a calculator that can perform basic arithmetic operations.
-    - Implement functions for each operation.
-    - Use a loop to allow multiple calculations.
+- Create a calculator that can perform basic arithmetic operations.
+- Implement functions for each operation.
+- Use a loop to allow multiple calculations.
 
 ### Prerequisites:
-    - Python 3.12.5
-    - install pip packages using requirements.text using command
-        
-        ```pip install -r requirements.txt
-    
-    - pip packages used : [pyment](https://pypi.org/project/pyment/) and [colorama](https://pypi.org/project/colorama/)
+- Python 3.12.5
+- install pip packages using requirements.text using command  'pip install -r requirements.txt'
+
+- pip packages used : [pyment](https://pypi.org/project/pyment/) and [colorama](https://pypi.org/project/colorama/)
 
 
 ### How to run?
->python3 calculator.py
+    ```python3 calculator.py
 
 ### Output
 ```.............................Welcome to command line simple Calculator!.......................................
