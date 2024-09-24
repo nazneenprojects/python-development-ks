@@ -12,7 +12,7 @@ This python-development-ks repository contains projects built as a part of inter
 - install pip packages using requirements.text using command  'pip install -r requirements.txt'
 
 - pip packages used : [pyment](https://pypi.org/project/pyment/) and [colorama](https://pypi.org/project/colorama/)
-
+- Note : how to generate automated docstring template ? 'pyment -w -o numpydoc <finename.py>'
 
 ### How to run?
     ```python3 calculator.py
