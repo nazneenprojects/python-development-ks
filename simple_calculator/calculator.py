@@ -26,18 +26,31 @@ def start_calculator():
 
 
 def take_input_numbers():
-    """ takes operands from user and converts it into list by validating and converting its type as float"""
-    print("Great! now you will be prompted two enter numbers ( operands ) on which you wish to perform calculations.")
+    """Takes operands from the user and converts them into a list by validating and converting their type to float."""
+    print("Great! Now you will be prompted to enter two numbers (operands) on which you wish to perform calculations.")
+
     operands = []
-    while True:
-        operand = input("Enter a number (or 'done' to finish): ")
-        operand = operand.strip()
+
+    while len(operands) < 2:
+        operand = input("Enter a number (or 'done' to finish): ").strip()
+
         if operand.lower() == 'done':
+            if len(operands) < 2:
+                print("You must enter at least two numbers before finishing.")
+                continue
             break
-        try:
-            operands.append(float(operand))
-        except ValueError:
-            print("Invalid input! Please enter numeric values.")
+
+        if not operand:
+            print("Empty input is not allowed. Please enter a number.")
+            continue
+        elif not operand.replace('.', '', 1).isdigit():
+            print("Invalid input! Please enter numeric values (no letters or special characters).")
+            continue
+        elif operand.count('.') > 1:
+            print("Invalid input! Please enter a valid floating-point number.")
+            continue
+
+        operands.append(float(operand))
 
     return operands
 
@@ -76,7 +89,7 @@ def addition(operands):
         returns float result by rounding off big result to only upto 5 decimal places
     """
     result = sum(operands)
-    return  round(result, 5)
+    return round(result, 5)
 
 
 def subtraction(operands):
@@ -164,7 +177,7 @@ def calculator():
             case 'r':
                 calculator()
             case _:
-                print("You entered invalid choice! exiting...")
+                print("You entered invalid choice! resetting...")
                 return "invalid operation"
 
 
