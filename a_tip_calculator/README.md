@@ -19,6 +19,6 @@ Define constant of default tip percentage (set to 15%).
 - Note : how to generate automated docstring template ? 'pyment -w -o numpydoc <finename.py>'
 
 ### How to run?
-    ```python3 tip_calculator.py
+python3 /a_tip_calculator/restaurant_billing/main.py
 
 ### Output
