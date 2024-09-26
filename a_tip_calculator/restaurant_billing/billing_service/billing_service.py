@@ -50,9 +50,12 @@ class BillingService(Restaurant):
             item_name = input(
                 "Enter the name of the food item (or type 'done' to finish and 'q' for exit from program): ").strip()
 
-            if item_name.lower() == 'done':
-                self.calculate_bill()
-                return
+            if item_name.strip().lower() == 'done':
+                    self.calculate_bill()
+                    return
+            elif not item_name.isalnum():
+                print("Invalid input. Item name should not be special char.")
+                continue
             elif not item_name:
                 print("You entered nothing. Please provide a valid item name.")
                 continue
@@ -106,7 +109,7 @@ class BillingService(Restaurant):
         bill = locale.currency(total_bill, grouping=True, international=False)
 
         print("\t\t \t...............Your Bill at FineDine Restaurant...........")
-        print("SUBTOTAL : ", subtotal)
-        print("TIP : ", tip)
-        print("TOTAL BILL : ", bill)
+        print("\t\t  SUBTOTAL : ", subtotal)
+        print("\t\t  TIP : ", tip)
+        print("\t\t  TOTAL BILL : ", bill)
         print("\t\t \t..........................................................")
