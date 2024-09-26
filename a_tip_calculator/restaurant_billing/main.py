@@ -10,10 +10,6 @@ if __name__ == "__main__":
     bill = BillingService()
     bill.billing_service()
 
-    # get_order_list_price()
-    # apply_tip_ammount()
-    # calculate_total_bill()
-    # print_bill()
 
 
 
