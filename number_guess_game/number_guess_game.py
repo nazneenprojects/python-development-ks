@@ -1,8 +1,10 @@
 """
             Number Guessing Game [using python 3.12.5]
 In this game computer guess any random number between 1 and 100 .
-Then user will be given change to guess it by entering a guess one at a time to check if , guess matches to what computer guessed initially.
-when guess matches, computer displays all the past guesses and result. Ask if user want to continue or exit from game!
+Then user will be given change to guess it by entering a guess one at a time to check if ,
+guess matches to what computer guessed initially.
+when guess matches, computer displays all the past guesses and result.
+Ask if user want to continue or exit from game!
 """
 import random
 import sys
@@ -27,9 +29,11 @@ def game_introduction():
     ..............................................................................................................  
     Welcome to the Game!                  
     In this, computer will guess any random number between 1 and 100 .
-    Then you will be given chance to guess it by entering a guess one at a time to check if , guess matches to what 
+    Then you will be given chance to guess it by entering a guess one at a time to check if , \
+    guess matches to what 
     computer guessed initially.
-    when guess matches, computer displays all the past guesses and result. Ask if you want to continue or exit from game!
+    when guess matches, computer displays all the past guesses and result. \
+    Ask if you want to continue or exit from game!
     Ready???
     ................................................................................................................
     """
@@ -58,7 +62,8 @@ def validation_of_userinput(number):
 
     Returns
     -------
-    Return the valid user input by accepting only int number between 1 and 100. While in other cases gives error message
+    Return the valid user input by accepting only int number between 1 and 100.
+    While in other cases gives error message
     to user and also gives next chance to correct the input
     """
     try:
@@ -128,6 +133,8 @@ def number_guess_game():
     while x != n:
         n = user_guess()
         guess_list.append(n)
+        # IMPROVE: replace the match with if-else
+        # DISCUSS:
         match x:
             case _ if (x == n):
                 print(Fore.BLUE, "You guessed it correctly! Hurray!", Style.RESET_ALL)

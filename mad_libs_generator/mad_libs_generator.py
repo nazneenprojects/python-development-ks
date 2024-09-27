@@ -10,7 +10,7 @@ user_words = {
     "verb": "[word_not_entered]",
 }
 
-
+# FIXME: Add validation for user inputs (prevent errors or catch them)
 def check_validation(word: str) -> bool:
     pass
 
@@ -56,8 +56,8 @@ def story_visiting_china(inputs: dict):
     print(story_template.format(**inputs))
     return
 
-
-def stroy_coffeehouse(inputs: dict):
+# IMPROVE: For long set of lines, text outputs can be stored in a file
+def story_coffeehouse(inputs: dict):
     story_template = """
     When {noun1}
     was {adj}
@@ -96,7 +96,7 @@ def mad_lib_generator():
             case '2':
                 story_visiting_china(get_user_inputs())
             case '3':
-                stroy_coffeehouse(get_user_inputs())
+                story_coffeehouse(get_user_inputs())
             case 'r':
                 print("you choose to reset")
                 mad_lib_generator()

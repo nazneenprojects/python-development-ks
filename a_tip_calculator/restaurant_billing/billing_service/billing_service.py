@@ -5,12 +5,11 @@ This is billing service for:
     -   calculate total bill
     -   print bill
 """
-import sys
-import locale
-from a_tip_calculator.restaurant_billing.restaurant.restaurant import Restaurant
-from colorama import init, Fore, Style
 
-init()
+import locale
+import sys
+
+from a_tip_calculator.restaurant_billing.restaurant.restaurant import Restaurant
 
 
 class BillingService(Restaurant):
@@ -38,7 +37,8 @@ class BillingService(Restaurant):
         ...............................................................................................................            
         """
         print(dept_info + "\n \t \t Department Owner: " + self.owner)
-        print("\t \t........................................................................................................")
+        print("\t \t...................................................................................................\
+        .....")
         self.get_order_items()
 
     def get_order_items(self):
@@ -46,6 +46,8 @@ class BillingService(Restaurant):
         Collects item names and prices, and stores them in the order_items dictionary.
         Allows the user to finalize the order by typing 'done'.
         """
+        # IMPROVE: if the input of the price isn't valid, the user should not be entering the name of the item again, but \
+        # should be asked to enter the price again.
         while True:
             item_name = input(
                 "Enter the name of the food item (or type 'done' to finish and 'q' for exit from program): ").strip()
@@ -63,7 +65,7 @@ class BillingService(Restaurant):
                 print("Invalid input. Item name should not be a number.")
                 continue
             elif item_name.strip().lower() == "q":
-                raise SystemError
+                sys.exit(0)
 
             try:
                 item_price = float(input(f"Enter the price for {item_name}: ").strip())

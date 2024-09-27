@@ -43,6 +43,7 @@ def take_input_numbers():
         if not operand:
             print("Empty input is not allowed. Please enter a number.")
             continue
+        # FIXME : negative numbers must be accepted by calculator . Handle custom logic for allowing decimal point and minus
         elif not operand.replace('.', '', 1).isdigit():
             print("Invalid input! Please enter numeric values (no letters or special characters).")
             continue
