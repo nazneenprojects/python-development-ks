@@ -35,10 +35,11 @@ def take_user_input():
             sys.exit(0)
 
         elif user_choice == "" or '_' in user_choice:
-            print("Invalid input, with underscore or empty input")
+            print("Invalid input, with underscore or empty input. "
+                  "Please enter one of the from 'rock' , 'scissor'. 'paper")
             break
         elif not user_choice.isalnum():
-            print("Special char not allowed")
+            print("Special char not allowed. Please enter one of the from 'rock' , 'scissor'. 'paper' .")
             break
         else:
             if user_choice.isalpha():
@@ -48,7 +49,7 @@ def take_user_input():
                     # print("You entered valid choice:", user_choice_validated[0])
                     return user_choice_validated[0]
                 elif user_choice.isalpha():
-                    print("Invalid word not allowed. Please enter one of the from 'rock' , 'scissor'. 'paper' : ")
+                    print("Invalid word not allowed. Please enter one of the from 'rock' , 'scissor'. 'paper' . ")
                     break
                 elif user_choice.isnumeric():
                     print("Invalid input, Numbers not allowed. Please enter one of the from 'rock' , 'scissor'. "
@@ -92,7 +93,7 @@ def start_game():
     print(Fore.BLUE, "\t\t", game_info, Style.RESET_ALL)
 
 
-# IMPROVE: optimize below logic to minimize comparisons
+# IMPROVE: optimized below logic to minimize comparisons
 def get_results(user_choice: str, computer_choice: str):
     """
      This helps decide the results by comparing inputs as user choice and computer choice
@@ -101,25 +102,40 @@ def get_results(user_choice: str, computer_choice: str):
     :return: prints the message what the output of game based predefines conditions
     """
 
-    if user_choice == "rock" and computer_choice == "scissor":
-        print(Fore.GREEN, f"You beat computer. Right Decision to select {user_choice}!", Style.RESET_ALL)
-    elif user_choice == "scissor" and computer_choice == "rock":
-        print(Fore.RED, f"Your decision was incorrect to choose {user_choice}, You lost, Computer won!",
-              Style.RESET_ALL)
-    elif user_choice == "scissor" and computer_choice == "paper":
-        print(Fore.GREEN, f"You beat computer.Your decision right to choose {user_choice}", Style.RESET_ALL)
-    elif user_choice == "paper" and computer_choice == "scissor":
-        print(Fore.RED, f"Your decision was incorrect to choose {user_choice}, You lost, Computer won!",
-              Style.RESET_ALL)
-    elif user_choice == "paper" and computer_choice == "rock":
-        print(Fore.GREEN, f"You beat computer. Your decision was right to choose {user_choice}", Style.RESET_ALL)
-    elif user_choice == "rock" and computer_choice == "paper":
-        print(Fore.RED, f"Your decision was incorrect to choose {user_choice}, You lost, Computer won!",
-              Style.RESET_ALL)
-    elif user_choice == computer_choice:
+    game_conditions =  {
+    "rock": "scissor",
+    "scissor": "paper",
+    "paper": "rock"
+}
+
+    if user_choice == computer_choice:
         print(Fore.RED, "Game Draw", Style.RESET_ALL)
+    elif game_conditions.get(user_choice) == computer_choice:
+        print(Fore.GREEN, f"You beat computer. Right Decision to select {user_choice}!", Style.RESET_ALL)
     else:
-        print(Fore.RED, "Please continue playing again !!", Style.RESET_ALL)
+        print(Fore.RED, f"Your decision was incorrect to choose {user_choice}, You lost, Computer won!",
+              Style.RESET_ALL)
+
+    #
+    # if user_choice == "rock" and computer_choice == "scissor":
+    #     print(Fore.GREEN, f"You beat computer. Right Decision to select {user_choice}!", Style.RESET_ALL)
+    # elif user_choice == "scissor" and computer_choice == "rock":
+    #     print(Fore.RED, f"Your decision was incorrect to choose {user_choice}, You lost, Computer won!",
+    #           Style.RESET_ALL)
+    # elif user_choice == "scissor" and computer_choice == "paper":
+    #     print(Fore.GREEN, f"You beat computer.Your decision right to choose {user_choice}", Style.RESET_ALL)
+    # elif user_choice == "paper" and computer_choice == "scissor":
+    #     print(Fore.RED, f"Your decision was incorrect to choose {user_choice}, You lost, Computer won!",
+    #           Style.RESET_ALL)
+    # elif user_choice == "paper" and computer_choice == "rock":
+    #     print(Fore.GREEN, f"You beat computer. Your decision was right to choose {user_choice}", Style.RESET_ALL)
+    # elif user_choice == "rock" and computer_choice == "paper":
+    #     print(Fore.RED, f"Your decision was incorrect to choose {user_choice}, You lost, Computer won!",
+    #           Style.RESET_ALL)
+    # elif user_choice == computer_choice:
+    #     print(Fore.RED, "Game Draw", Style.RESET_ALL)
+    # else:
+    #     print(Fore.RED, "Please continue playing again !!", Style.RESET_ALL)
 
 
 def rock_paper_scissors_game():
