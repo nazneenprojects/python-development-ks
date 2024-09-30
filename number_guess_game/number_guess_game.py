@@ -136,7 +136,7 @@ def number_guess_game():
         # IMPROVE: replace the match with if-else
         # DISCUSS:
         match x:
-            case _ if (x == n):
+            case n if (x == n):
                 print(Fore.BLUE, "You guessed it correctly! Hurray!", Style.RESET_ALL)
                 print("Here are your guess attempts to reach here:", *guess_list, sep=', ')
                 check_choice()
