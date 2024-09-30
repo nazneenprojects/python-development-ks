@@ -21,14 +21,14 @@ Paper covers Rock (Paper wins).
 If both players choose the same shape, the game is a draw, and they can play again.
 
 ### Main Goals:
-- Play This game with Computer as opponent!
+- Play this game with Computer as opponent!
 
 ### Prerequisites:
 - Python 3.12.5
 - install pip packages using requirements.text using command  'pip install -r requirements.txt'
 
 ### How to run?
-    ```python3 rock_paper_scissors.py
+    python3 rock_paper_scissors.py
 
 ### Output
 
