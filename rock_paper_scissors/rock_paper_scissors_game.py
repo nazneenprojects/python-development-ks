@@ -8,7 +8,6 @@ from colorama import init, Fore, Style
 
 init()
 
-
 game_menu = ["rock", "paper", "scissor"]
 
 
@@ -46,16 +45,18 @@ def take_user_input():
                 user_choice.lower()
                 user_choice_validated = [el for el in game_menu if el == user_choice]
                 if user_choice_validated:
-                    #print("You entered valid choice:", user_choice_validated[0])
+                    # print("You entered valid choice:", user_choice_validated[0])
                     return user_choice_validated[0]
                 elif user_choice.isalpha():
                     print("Invalid word not allowed. Please enter one of the from 'rock' , 'scissor'. 'paper' : ")
                     break
                 elif user_choice.isnumeric():
-                    print("Invalid input, Numbers not allowed. Please enter one of the from 'rock' , 'scissor'. 'paper' : ")
+                    print("Invalid input, Numbers not allowed. Please enter one of the from 'rock' , 'scissor'. "
+                          "'paper' : ")
                     break
             else:
-                print("Invalid input, Numbers, special char must not be added with input. Please enter one of the from 'rock' , 'scissor'. 'paper' ")
+                print("Invalid input, Numbers, special char must not be added with input. Please enter one of the "
+                      "from 'rock' , 'scissor'. 'paper' ")
 
 
 def start_game():
@@ -87,9 +88,8 @@ def start_game():
     """
     figlet = Figlet(font='slant')
     text_art = figlet.renderText('Rock Paper Scissor')
-    print("\t \t \t",text_art)
+    print("\t \t \t", text_art)
     print(Fore.BLUE, "\t\t", game_info, Style.RESET_ALL)
-
 
 
 # IMPROVE: optimize below logic to minimize comparisons
@@ -104,17 +104,20 @@ def get_results(user_choice: str, computer_choice: str):
     if user_choice == "rock" and computer_choice == "scissor":
         print(Fore.GREEN, f"You beat computer. Right Decision to select {user_choice}!", Style.RESET_ALL)
     elif user_choice == "scissor" and computer_choice == "rock":
-        print(Fore.RED, f"Your decision was incorrect to choose {user_choice}, You lost, Computer won!", Style.RESET_ALL)
+        print(Fore.RED, f"Your decision was incorrect to choose {user_choice}, You lost, Computer won!",
+              Style.RESET_ALL)
     elif user_choice == "scissor" and computer_choice == "paper":
-        print(Fore.GREEN,f"You beat computer.Your decision right to choose {user_choice}", Style.RESET_ALL)
+        print(Fore.GREEN, f"You beat computer.Your decision right to choose {user_choice}", Style.RESET_ALL)
     elif user_choice == "paper" and computer_choice == "scissor":
-        print(Fore.RED, f"Your decision was incorrect to choose {user_choice}, You lost, Computer won!", Style.RESET_ALL)
+        print(Fore.RED, f"Your decision was incorrect to choose {user_choice}, You lost, Computer won!",
+              Style.RESET_ALL)
     elif user_choice == "paper" and computer_choice == "rock":
         print(Fore.GREEN, f"You beat computer. Your decision was right to choose {user_choice}", Style.RESET_ALL)
     elif user_choice == "rock" and computer_choice == "paper":
-        print(Fore.RED, f"Your decision was incorrect to choose {user_choice}, You lost, Computer won!", Style.RESET_ALL)
+        print(Fore.RED, f"Your decision was incorrect to choose {user_choice}, You lost, Computer won!",
+              Style.RESET_ALL)
     elif user_choice == computer_choice:
-        print(Fore.RED, "Game Draw" , Style.RESET_ALL)
+        print(Fore.RED, "Game Draw", Style.RESET_ALL)
     else:
         print(Fore.RED, "Please continue playing again !!", Style.RESET_ALL)
 
