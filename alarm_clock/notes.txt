@@ -1,0 +1,51 @@
+(2[0-3]|[01]?[0-9]): Validates hours (HH) between 00 and 23.
+(:([0-5]?[0-9]))?: Optionally validates minutes (MM) between 00 and 59.
+(:([0-5]?[0-9]))?: Optionally validates seconds (SS) between 00 and 59.
+----------------
+from tkinter import  *
+
+import TK
+
+root = TK()
+root.t
+
+def alarm_clock():
+
+    pass
+
+
+if __name__ == "__main__":
+    alarm_clock()
+    root.mainloop()
+
+
+---------------------------------------------------------------------------------------
+
+PyDev console: starting.
+Python 3.12.5 (main, Aug 12 2024, 12:51:46) [GCC 11.4.0] on linux
+import tkinter
+Traceback (most recent call last):
+  File "/snap/pycharm-community/414/plugins/python-ce/helpers/pydev/pydevconsole.py", line 364, in runcode
+    coro = func()
+           ^^^^^^
+  File "<input>", line 1, in <module>
+  File "/snap/pycharm-community/414/plugins/python-ce/helpers/pydev/_pydev_bundle/pydev_import_hook.py", line 21, in do_import
+    module = self._system_import(name, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/tkinter/__init__.py", line 38, in <module>
+    import _tkinter # If this fails your Python may not be configured for Tk
+    ^^^^^^^^^^^^^^^
+  File "/snap/pycharm-community/414/plugins/python-ce/helpers/pydev/_pydev_bundle/pydev_import_hook.py", line 21, in do_import
+    module = self._system_import(name, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named '_tkinter'
+import _tkinter
+Traceback (most recent call last):
+  File "/snap/pycharm-community/414/plugins/python-ce/helpers/pydev/pydevconsole.py", line 364, in runcode
+    coro = func()
+           ^^^^^^
+  File "<input>", line 1, in <module>
+  File "/snap/pycharm-community/414/plugins/python-ce/helpers/pydev/_pydev_bundle/pydev_import_hook.py", line 21, in do_import
+    module = self._system_import(name, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named '_tkinter'
