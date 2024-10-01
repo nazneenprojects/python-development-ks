@@ -1,7 +1,7 @@
 # python-development-ks
 This python-development-ks repository contains projects built as a part of internship training program using python3
 
-## Task 4: alatm clock
+## Task 4: alarm clock
 Alarm Clock [using python 3.12.5]
 
 
