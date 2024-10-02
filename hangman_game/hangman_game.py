@@ -15,50 +15,55 @@ correct_letters = []
 word_letters = []
 attempts = 6
 count = 0
-
-hangman_draw = ['''
+hangman_draw = [r'''
   +---+
   |   |
       |
       |
       |
       |
-=========''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========''', '''
+=========''',
+r'''
   +---+
   |   |
   O   |
+      |
+      |
+      |
+=========''',
+r'''
+  +---+
+  |   |
+  O   |
   |   |
       |
       |
-=========''', '''
+=========''',
+r'''
   +---+
   |   |
   O   |
  /|   |
       |
       |
-=========''', '''
+=========''',
+r'''
   +---+
   |   |
   O   |
  /|\  |
       |
       |
-=========''', '''
+=========''',
+r'''
   +---+
   |   |
   O   |
  /|\  |
  /    |
       |
-=========''', '''
+=========''',
+r'''
   +---+
   |   |
   O   |
@@ -66,6 +71,7 @@ hangman_draw = ['''
  / \  |
       |
 =========''']
+
 
 def choose_word():
     '''
@@ -108,7 +114,7 @@ def hangman():
     # Check if the guess is not a letter - if so, print out to the user that it is not a letter and go for the next guess
     while attempts > 0:
         guess = input("Guess a letter: ").lower().strip()
-        print(guess)
+        #print(guess)
 
         if  len(guess) != 1:
             print(Fore.RED,"Multiple char or word now allowed . please enter only single letter", Style.RESET_ALL)
