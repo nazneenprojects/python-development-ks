@@ -24,129 +24,11 @@ End game: If the player guesses the word correctly within the allowed attempts, 
     ```python3 hangman_game.py
 
 ### Output
-Game not won:
-    
-             +---+
-      |   |
-          |
-          |
-          |
-          |
-    =========
-                     __  __                                            ______                   
-       / / / /___ _____  ____ _____ ___  ____ _____      / ____/___ _____ ___  ___ 
-      / /_/ / __ `/ __ \/ __ `/ __ `__ \/ __ `/ __ \    / / __/ __ `/ __ `__ \/ _ \
-     / __  / /_/ / / / / /_/ / / / / / / /_/ / / / /   / /_/ / /_/ / / / / / /  __/
-    /_/ /_/\__,_/_/ /_/\__, /_/ /_/ /_/\__,_/_/ /_/____\____/\__,_/_/ /_/ /_/\___/ 
-                      /____/                     /_____/                           
-    
-    word chosen by computer: orange
-    _ _ _ _ _ _
-    Guess a letter: z
-    z
-     letter added to guessed set 
-    Your guess was incorrect!
-     lives remaining : 5 
-    
-      +---+
-      |   |
-          |
-          |
-          |
-          |
-    =========
-     you will be asked to enter inputs again... 
-    Guess a letter: r
-    r
-     letter added to guessed set 
-     You guessed it correctly 
-    _ r _ _ _ _
-    Guess a letter: g
-    g
-     letter added to guessed set 
-     You guessed it correctly 
-    _ r _ _ g _
-    Guess a letter: rt
-    rt
-     Multiple char or word now allowed . please enter only single letter 
-    Guess a letter: w
-    w
-     letter added to guessed set 
-    Your guess was incorrect!
-     lives remaining : 4 
-    
-      +---+
-      |   |
-      O   |
-          |
-          |
-          |
-    =========
-     you will be asked to enter inputs again... 
-    Guess a letter: m
-    m
-     letter added to guessed set 
-    Your guess was incorrect!
-     lives remaining : 3 
-    
-      +---+
-      |   |
-      O   |
-      |   |
-          |
-          |
-    =========
-     you will be asked to enter inputs again... 
-    Guess a letter: u
-    u
-     letter added to guessed set 
-    Your guess was incorrect!
-     lives remaining : 2 
-    
-      +---+
-      |   |
-      O   |
-     /|   |
-          |
-          |
-    =========
-     you will be asked to enter inputs again... 
-    Guess a letter: y
-    y
-     letter added to guessed set 
-    Your guess was incorrect!
-     lives remaining : 1 
-    
-      +---+
-      |   |
-      O   |
-     /|\  |
-          |
-          |
-    =========
-     you will be asked to enter inputs again... 
-    Guess a letter: q
-    q
-     letter added to guessed set 
-    Your guess was incorrect!
-     lives remaining : 0 
-    
-      +---+
-      |   |
-      O   |
-     /|\  |
-     /    |
-          |
-    =========
-     Attempts over! 
-     You lost! here is the correct word : orange 
-    
-    Process finished with exit code 0
 
+Round 1:
 
-Game Won:
-
-                +---+
+                
+                 +---+
           |   |
               |
               |
@@ -160,10 +42,19 @@ Game Won:
         /_/ /_/\__,_/_/ /_/\__, /_/ /_/ /_/\__,_/_/ /_/____\____/\__,_/_/ /_/ /_/\___/ 
                           /____/                     /_____/                           
         
-        word chosen by computer: kiwi
-        _ _ _ _
-        Guess a letter: x
-        x
+        word chosen by computer: apple
+        _ _ _ _ _
+        Guess a letter: #
+         That is not a letter. Please guess a valid letter.
+        Guess a letter: 7
+         That is not a letter. Please guess a valid letter.
+        Guess a letter: rtz
+         Multiple char or word now allowed . please enter only single letter 
+        Guess a letter: e
+         letter added to guessed set 
+         You guessed it correctly 
+        _ _ _ _ e
+        Guess a letter: z
          letter added to guessed set 
         Your guess was incorrect!
          lives remaining : 5 
@@ -176,16 +67,7 @@ Game Won:
               |
         =========
          you will be asked to enter inputs again... 
-        Guess a letter: w
-        w
-         letter added to guessed set 
-         You guessed it correctly 
-        _ _ w _
-        Guess a letter: 8
-        8
-         That is not a letter. Please guess a valid letter.
-        Guess a letter: ä
-        ä
+        Guess a letter: f
          letter added to guessed set 
         Your guess was incorrect!
          lives remaining : 4 
@@ -198,17 +80,7 @@ Game Won:
               |
         =========
          you will be asked to enter inputs again... 
-        Guess a letter: #
-        #
-         That is not a letter. Please guess a valid letter.
-        Guess a letter: oo
-        oo
-         Multiple char or word now allowed . please enter only single letter 
-        Guess a letter: w
-        w
-         You've already guessed the letter 'w'. Try again. 
-        Guess a letter: r
-        r
+        Guess a letter: g
          letter added to guessed set 
         Your guess was incorrect!
          lives remaining : 3 
@@ -221,15 +93,52 @@ Game Won:
               |
         =========
          you will be asked to enter inputs again... 
-        Guess a letter: k
-        k
+        Guess a letter: h
          letter added to guessed set 
-         You guessed it correctly 
-        k _ w _
-        Guess a letter: i
-        i
+        Your guess was incorrect!
+         lives remaining : 2 
+        
+          +---+
+          |   |
+          O   |
+         /|   |
+              |
+              |
+        =========
+         you will be asked to enter inputs again... 
+        Guess a letter: c
          letter added to guessed set 
-         You guessed it correctly 
-        k i w i
-         Hurray!  You Won the Game! 
-        still lives remaining : 3
+        Your guess was incorrect!
+         lives remaining : 1 
+        
+          +---+
+          |   |
+          O   |
+         /|\  |
+              |
+              |
+        =========
+         you will be asked to enter inputs again... 
+        Guess a letter: q
+         letter added to guessed set 
+        Your guess was incorrect!
+         lives remaining : 0 
+        
+          +---+
+          |   |
+          O   |
+         /|\  |
+         /    |
+              |
+        =========
+         Attempts over! 
+         You lost! here is the correct word : apple 
+
+
+Round 2 :
+
+
+
+![Screenshot from 2024-10-02 12-50-07.png](Screenshot%20from%202024-10-02%2012-50-07.png)
+![Screenshot from 2024-10-02 12-50-57.png](Screenshot%20from%202024-10-02%2012-50-57.png)
+![Screenshot from 2024-10-02 12-51-40.png](Screenshot%20from%202024-10-02%2012-51-40.png)
