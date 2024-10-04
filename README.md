@@ -8,4 +8,4 @@ This python-development-ks repository contains projects built as a part of inter
 ## Task 5 : [Rock_Paper_Scissor](https://github.com/nazneenprojects/python-development-ks/tree/master/rock_paper_scissors#readme)
 ## Task 6 : [Alarm_Clock](https://github.com/nazneenprojects/python-development-ks/tree/master/alarm_clock#readme)
 ## Task 7 : [Hangman_Game](https://github.com/nazneenprojects/python-development-ks/blob/master/hangman_game/README.md)
-## Task 8 : [Delivery Fee Calculator](https://github.com/nazneenprojects/python-development-ks/tree/master/delivery_fee_calculator#readme)
+## Task 8 : [Delivery_Fee_Calculator](https://github.com/nazneenprojects/python-development-ks/tree/master/delivery_fee_calculator#readme)
